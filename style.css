@@ -1,0 +1,54 @@
+body {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+}
+.post-container {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 16px;
+}
+.post-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+.like-btn {
+    background: #ed4956;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+.comments-section {
+    margin-top: 16px;
+}
+.comments-section ul {
+    list-style: none;
+    padding: 0;
+}
+.comments-section li {
+    background: #f1f1f1;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+.comments-section input[type="text"] {
+    width: 70%;
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid #dbdbdb;
+}
+.comments-section button {
+    background: #3897f0;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
