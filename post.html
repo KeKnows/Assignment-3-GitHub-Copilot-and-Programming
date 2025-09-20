@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-like Feed</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% for post in posts %}
+    <div class="post-container">
+        <div class="post-image">
+            <img src="/static/{{ post.image }}" alt="Post Image">
+        </div>
+        <form method="POST" style="display:inline-block;">
+            <input type="hidden" name="post_id" value="{{ post.id }}">
+            <button type="submit" name="like" class="like-btn">❤️ Like ({{ post.likes }})</button>
+        </form>
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <ul>
+                {% for comment in post.comments %}
+                <li>{{ comment }}</li>
+                {% endfor %}
+            </ul>
+            <form method="POST">
+                <input type="hidden" name="post_id" value="{{ post.id }}">
+                <input type="text" name="comment_text" placeholder="Add a comment..." required>
+                <button type="submit" name="comment">Post</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
